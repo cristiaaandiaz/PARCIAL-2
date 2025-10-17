@@ -1,0 +1,738 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.4;
+  color: #333;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HEADER */
+.site-header {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 1000;
+  padding: 0;
+  height: 70px;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  position: relative;
+}
+
+.header-left {
+  position: absolute;
+  left: 20px;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.main-nav {
+  flex-grow: 1;
+  margin-left: 140px;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #0066cc;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.login-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-form input {
+  padding: 8px 35px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  width: 150px;
+  font-size: 14px;
+}
+
+.search-form button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* BANNER PRINCIPAL */
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+    url('../images/banner-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.banner-content {
+  max-width: 500px;
+  padding: 0 0 0 80px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.banner-logo {
+  height: 120px;
+  width: auto;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.banner-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-subtitle {
+  font-size: 18px;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.banner-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  letter-spacing: 0.5px;
+  min-width: 200px;
+}
+
+.btn-primary {
+  background-color: #e50914;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #b8070f;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* SECCIÓN DE FEATURES (TARJETAS MORADAS) */
+.features {
+  background-color: #8b5cf6;
+  padding: 80px 0;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.feature-card {
+  background-color: #e8c75c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 22px;
+  color: #333;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.card-content p {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  color: #555;
+}
+
+.watch-btn {
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.watch-btn:hover {
+  color: #9f7aea;
+}
+
+/* EXPLORE MORE DISNEY+ */
+.explore {
+  background-color: #054553;
+  padding: 80px 0;
+  color: white;
+}
+
+.explore h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.explore-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.explore-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.explore-content {
+  background-color: #054553;
+  padding: 20px;
+  color: white;
+}
+
+
+.explore-content p {
+  font-size: 15px;
+  margin-bottom: 12px;
+  opacity: 0.9;
+}
+
+.explore-btn {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  transition: all 0.3s;
+}
+
+.explore-btn:hover {
+  color: #ccc;
+}
+
+/* COMING SOON */
+.coming-soon {
+  padding: 80px 0;
+  background-color: white;
+}
+
+.coming-soon h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 50px;
+  color: #333;
+  font-weight: 700;
+}
+
+.coming-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.coming-item {
+  text-align: center;
+  background-color: transparent;
+}
+
+.coming-item img {
+  width: 100%;
+  height: auto;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: transparent;
+}
+
+
+.coming-item:hover {
+  transform: translateY(-5px);
+}
+
+
+
+
+.coming-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.coming-info p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+/* DISNEY PARKS */
+.parks {
+  padding: 80px 0;
+  background-color: #f7f7f7;
+  /* fondo gris claro */
+}
+
+.parks h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 40px;
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.parks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.park-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.park-card:hover {
+  transform: translateY(-4px);
+}
+
+.park-card img {
+  width: 100%;
+  height: auto;
+  /* altura dinámica, muestra imagen completa */
+  display: block;
+  object-fit: contain;
+  /* asegura que no se recorte */
+  background-color: #fff;
+  /* evita franjas negras */
+  margin: 0 auto;
+}
+
+.park-content {
+  text-align: center;
+  padding: 25px 20px;
+}
+
+.park-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.park-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.park-btn {
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  transition: color 0.3s ease;
+  border: none;
+  background: none;
+}
+
+.park-btn:hover {
+  text-decoration: underline;
+  color: #000;
+}
+
+
+
+/* ---------------------------
+   DISNEY CREDIT CARDS - FIX FINAL (quita franja vertical)
+   --------------------------- */
+.credit-cards {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #dff7ff;
+  /* azul claro principal */
+  overflow: hidden;
+  min-height: 520px;
+}
+
+/* Fondo: imagen a la izquierda, sin rotaciones que generen huecos */
+.credit-cards__bg {
+  position: absolute;
+  left: -12%;
+  /* desplaza la imagen ligeramente fuera del viewport */
+  top: 50%;
+  transform: translateY(-50%);
+  /* centra verticalmente sin rotar */
+  width: 72%;
+  /* ocupar ~72% del ancho visual (ajustable) */
+  height: 120%;
+  /* un poco mayor para evitar bordes en pantallas altas */
+  background-image: url("../images/more-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: auto 100%;
+  /* escala por altura: mantiene proporción y no "zoom" por ancho */
+  z-index: 1;
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* capa suave para eliminar la franja / borde entre la imagen y el fondo */
+.credit-cards::after {
+  content: "";
+  position: absolute;
+  left: calc(-12% + 68%);
+  /* = left offset + ancho aproximado de la imagen (ajusta si cambias width) */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  /* degradado sutil: transparente hacia la izquierda (imagen) y color sólido a la derecha */
+  background: linear-gradient(to right,
+      rgba(223, 247, 255, 0) 0%,
+      rgba(223, 247, 255, 0.25) 15%,
+      rgba(223, 247, 255, 0.6) 40%,
+      #dff7ff 100%);
+  pointer-events: none;
+}
+
+/* Contenedor del contenido (arriba del fondo) */
+.credit-cards .container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: block;
+}
+
+/* BLOQUE de info: superpuesto a la derecha */
+.cards-info {
+  position: relative;
+  z-index: 4;
+  max-width: 460px;
+  padding: 60px 80px 60px 0;
+  text-align: left;
+  color: #0f3b66;
+  margin-left: auto;
+  /* asegura que esté en el lado derecho */
+}
+
+/* Tipografía y jerarquía */
+.cards-info h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  color: #0f3b66;
+}
+
+.offer-section h3,
+.financing-section h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 8px 0;
+  color: #0f3b66;
+}
+
+.offer-section p,
+.financing-section p {
+  font-size: 15px;
+  line-height: 1.45;
+  color: #0f3b66;
+}
+
+/* CTA */
+.cards-btn {
+  display: inline-block;
+  background-color: #8b5cf6;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 12px;
+  transition: background 0.2s ease;
+}
+
+.cards-btn:hover {
+  background-color: #7c3aed;
+}
+
+/* RESPONSIVE: en pantallas pequeñas centramos y ponemos la info sobre la imagen */
+@media (max-width: 1024px) {
+  .credit-cards {
+    min-height: 680px;
+    align-items: flex-start;
+    padding-top: 28px;
+  }
+
+  .credit-cards__bg {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 110%;
+    height: auto;
+    background-position: center top;
+    background-size: cover;
+  }
+
+  .credit-cards::after {
+    display: none;
+  }
+
+  /* no necesitamos el degradado en móvil */
+
+  .cards-info {
+    position: relative;
+    margin: 0 auto;
+    max-width: 92%;
+    padding: 28px 22px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.88);
+    /* mejora legibilidad en móvil */
+    border-radius: 12px;
+  }
+}
+
+
+
+/* FOOTER */
+.site-footer {
+  background-color: #1f2937;
+  border-top: 1px solid #374151;
+  padding: 50px 0;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.footer-logo {
+  height: 35px;
+  margin-bottom: 25px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #d1d5db;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+  color: #0066cc;
+}
+
+.footer-nav a:not(:last-child)::after {
+  content: "|";
+  margin-left: 15px;
+  color: #6b7280;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coming-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .header-left {
+    position: static;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coming-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .parks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .coming-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
